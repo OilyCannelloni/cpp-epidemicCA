@@ -1,12 +1,12 @@
+#include "constants.h"
+#include "Cell.h"
+
 #include <SDL2/SDL.h>
 #include <iostream>
-#include <string>
 #include <cstdlib>
 #include <ctime>
 #include <list>
 
-#include "constants.h"
-#include "Cell.h"
 
 bool init();
 void close();
@@ -129,7 +129,12 @@ void shuffle(int arr[], int length) {
 }
 
 int main(int argc, char* args[]) {
-    srand(time(NULL));
+    if (argc < 4) return 0;
+    Cell::RECOVERY_CHANCE = strtod(args[1], nullptr);
+    Cell::DEATH_CHANCE = strtod(args[2], nullptr);
+    Cell::IMMUNITY_LOSS_CHANCE = strtod(args[3], nullptr);
+
+    srand(time(nullptr));
 
     if (!init()) {
         printf( "Failed to initialize!\n" );

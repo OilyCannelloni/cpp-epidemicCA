@@ -4,6 +4,8 @@
 #include "Cell.h"
 #include "constants.h"
 
+double Cell::RECOVERY_CHANCE, Cell::DEATH_CHANCE, Cell::IMMUNITY_LOSS_CHANCE;
+
 void Cell::initialize(int x, int y) {
     _x = x;
     _y = y;

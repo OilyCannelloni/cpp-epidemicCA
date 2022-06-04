@@ -1,6 +1,3 @@
-//
-// Created by oilymacaroni on 02.06.22.
-//
 
 #ifndef EPIDEMICCA_CONSTANTS_H
 #define EPIDEMICCA_CONSTANTS_H
@@ -19,10 +16,6 @@ constexpr int GRID_SIZE = GRID_HEIGHT * GRID_WIDTH;
 
 constexpr int CELL_WIDTH = CANVAS_WIDTH / GRID_WIDTH;
 constexpr int CELL_HEIGHT = CANVAS_HEIGHT / GRID_HEIGHT;
-
-const double RECOVERY_CHANCE = 0.05;
-const double DEATH_CHANCE = 0.002;
-const double IMMUNITY_LOSS_CHANCE = 0.007;
 
 enum CellType {
     SUSCEPTIBLE,

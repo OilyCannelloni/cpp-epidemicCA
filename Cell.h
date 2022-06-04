@@ -18,6 +18,8 @@ private:
     Cell* neighbours[4] = {nullptr, nullptr, nullptr, nullptr};
 
 public:
+    static double RECOVERY_CHANCE, DEATH_CHANCE, IMMUNITY_LOSS_CHANCE;
+
     Cell() = default;
     void initialize(int x, int y);
 
