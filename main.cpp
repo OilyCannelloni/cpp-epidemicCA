@@ -129,7 +129,10 @@ void shuffle(int arr[], int length) {
 }
 
 int main(int argc, char* args[]) {
-    if (argc < 4) return 0;
+    if (argc < 4) {
+        std::cout << "To few arguments! Try ./main 0.05 0.001 0.007\n";
+        return 0;
+    }
     Cell::RECOVERY_CHANCE = strtod(args[1], nullptr);
     Cell::DEATH_CHANCE = strtod(args[2], nullptr);
     Cell::IMMUNITY_LOSS_CHANCE = strtod(args[3], nullptr);
